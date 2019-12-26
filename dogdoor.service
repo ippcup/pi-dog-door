@@ -1,0 +1,16 @@
+###save in: /lib/systemd/system/dogdoor.service
+##sudo systemctl daemon-reload
+#sudo service dogdoor start
+
+[Unit]
+Description=Dog Door Service
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/Python/dogdoor-controller.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
