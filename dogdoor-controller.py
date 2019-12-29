@@ -143,8 +143,8 @@ def emailImage(abs_file_path, currentdate, rel_path):
     print("emailing image")
     logger.info("emailing image")
     # Define these once; use them twice!
-    strFrom = '***REMOVED***'
-    strTo = '***REMOVED***'
+    strFrom = 'fdsa@gmail.com'
+    strTo = 'asdf@gmail.com'
 
     # Create the root message and fill in the from, to, and subject headers
     msgRoot = MIMEMultipart('related')
@@ -160,7 +160,7 @@ def emailImage(abs_file_path, currentdate, rel_path):
     msgAlternative.attach(msgText)
 
     # We reference the image in the IMG SRC attribute by the ID we give it below
-    msgText = MIMEText('<b>Salvador <i>is</i> a good boy!</b> Hopefully, this is an image of a dog and not a person else<br><img src="cid:image1"><br>', 'html')
+    msgText = MIMEText('<b>DOG NAME HERE <i>is</i> a good boy!</b> Hopefully, this is an image of a dog and not a person else<br><img src="cid:image1"><br>', 'html')
     msgAlternative.attach(msgText)
     # This example assumes the image is in the current directory
     fp = open(abs_file_path, 'rb')
@@ -176,7 +176,7 @@ def emailImage(abs_file_path, currentdate, rel_path):
     smtp_port = 465
     smtp = smtplib.SMTP_SSL(smtp_server, smtp_port)
     smtp.ehlo()
-    smtp.login('asdf@gmail.com', 'asdffdsa')
+    smtp.login('fdsa@gmail.com', 'asdffdsa')
     smtp.sendmail(strFrom, strTo, msgRoot.as_string())
     smtp.quit()
     print("IMAGE HAS BEEN EMAILED")
