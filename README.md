@@ -30,8 +30,8 @@ sudo apt-get install build-essential cmake pkg-config libjpeg-dev \
  libgtk-3-dev libatlas-base-dev gfortran dh-make
 sudo pip3 install adafruit_blinka board imutils numpy
 cd ~
-wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.9.zip
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.9.zip
+wget -O opencv.zip https://codeload.github.com/opencv/opencv/zip/3.4.9
+wget -O opencv_contrib.zip https://codeload.github.com/opencv/opencv_contrib/zip/3.4.9
 unzip opencv.zip
 unzip opencv_contrib.zip
 
