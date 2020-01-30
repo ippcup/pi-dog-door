@@ -70,7 +70,7 @@ cv2.__version__
 
 
 #Media Section
-![Setup](media/thedetails.jpg)
+![Setup](media/thedetails2.jpg)
 
 ![Demo](media/demo.gif)
 
