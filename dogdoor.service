@@ -8,7 +8,9 @@ Wants=network-online.target
 After=network.target network-online.target
 
 [Service]
-Type=simple
+Environment=PYTHONUNBUFFERED=1
+Type=notify
+Restart=on-failure
 ExecStart=/usr/bin/python3 /home/pi/Python/dogdoor-controller.py
 User=pi
 
